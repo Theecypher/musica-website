@@ -1,0 +1,319 @@
+root {
+  --drop-shadow: 0 25 100 0;
+  --music-player-color: #101010;
+  --bigbox-color: #609EAF;
+  --primary-color: #A4C7C6;
+  --secondary-color: #FACD66;
+  --dark-color: #1D0123;
+  --dark-color2: #1D2123;
+  --white-color: #efeee0;
+  --dark-color-alt: #1a1e1e;
+  --light-color: #D9D9D9;
+  --box-shadow: 0px 0px 11px rgba(250, 205, 102, 0.25);
+  --white-color-alt: #FFFFFF;
+}
+
+.navclass {
+  border-radius: 10px;
+  background: var(--dark-color-alt);
+  -webkit-box-shadow: 0px 0px 11px rgba(250, 205, 102, 0.25);
+          box-shadow: 0px 0px 11px rgba(250, 205, 102, 0.25);
+}
+
+.sidebar1, .sidebar2 {
+  margin: .75em .7em;
+  padding: 1em 0;
+}
+
+.navitems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+ul li .navlink {
+  margin: 1.3em .75em;
+}
+
+.showItem {
+  display: block;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
+.navlink path {
+  fill: #ccc;
+}
+
+.navlink:hover path {
+  fill: var(--secondary-color);
+}
+
+.navlink.active path {
+  fill: var(--secondary-color);
+}
+
+main {
+  margin-top: 4em;
+}
+
+.song {
+  padding-top: 2em;
+}
+
+.album-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.music-group {
+  margin: .5em 1.5em;
+}
+
+.music-group .album-pic {
+  width: 400px;
+  height: 350px;
+  border-radius: 3em;
+}
+
+.song-detail {
+  margin: -2em 5em 2em;
+}
+
+.song-detail .song-list {
+  background-color: var(--music-player-color);
+  opacity: 50%;
+  padding: .2em 1.5em;
+  border-radius: 10px;
+  margin-bottom: .75em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.song-detail img {
+  width: 40px;
+  height: 40px;
+}
+
+.song-detail .song-infor {
+  gap: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.song-detail .duration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.song-detail .dots {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.song-detail .dot {
+  width: 5px;
+  border-radius: 50%;
+  margin: .2em 0;
+  height: 6px;
+  background-color: var(--secondary-color);
+  display: block;
+}
+
+.song-data {
+  margin: 1em;
+  padding: 1em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.song-data h3 {
+  color: var(--primary-color);
+  font-size: 2.5em;
+}
+
+.song-data p {
+  margin-left: .2em;
+  padding-top: 1em;
+  font-size: 1em;
+  padding-bottom: 1em;
+}
+
+.song-data .songs-attr {
+  margin-left: 10em;
+}
+
+.song-data span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  opacity: 100%;
+}
+
+.song-data .like-text {
+  display: none;
+}
+
+.song-data .songs-attr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1em .3em;
+}
+
+.song-data div {
+  margin: 8px;
+  background-color: var(--music-player-color);
+  padding: .5em 2.5em;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 828px) {
+  .sidebar1, .sidebar2 {
+    margin: 0;
+    padding: 0;
+  }
+  .sidemenu {
+    background-color: var(--dark-color-alt);
+    z-index: 100;
+    padding: 0;
+    left: 0;
+    top: 10%;
+    width: 18em;
+    height: 100vh;
+    position: fixed;
+    border-radius: 10px;
+    -webkit-transition: -webkit-transform 300ms ease-in;
+    transition: -webkit-transform 300ms ease-in;
+    transition: transform 300ms ease-in;
+    transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
+  }
+  .sidemenu--isHidden {
+    -webkit-transform: translateX(-20rem);
+            transform: translateX(-20rem);
+    -webkit-transition: -webkit-transform 300ms ease-out;
+    transition: -webkit-transform 300ms ease-out;
+    transition: transform 300ms ease-out;
+    transition: transform 300ms ease-out, -webkit-transform 300ms ease-out;
+  }
+  .navclass {
+    border-radius: 0;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .navitems {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  ul li .navlink {
+    color: red;
+    margin: 3.5em 2em;
+  }
+  .toggle {
+    cursor: pointer;
+    background-color: var(--light-color);
+    width: 20px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 1px;
+    height: 3px;
+    margin-right: 2em;
+    transition: transform 0.25s, -webkit-transform 0.25s;
+  }
+  .toggle:before {
+    cursor: pointer;
+    content: "";
+    background-color: var(--light-color);
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 1px;
+    height: 3px;
+    margin-right: 2em;
+    transition: transform 0.25s, -webkit-transform 0.25s;
+  }
+  .song {
+    padding-top: .5em;
+  }
+  .album-detail {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .music-group {
+    border: 2px solid red;
+    margin: .1em 1.5em;
+  }
+  .music-group .album-pic {
+    margin: .1em auto .7em;
+    width: 600px;
+    height: 500px;
+    border-radius: 3em;
+  }
+  .song-detail {
+    border: 2px solid red;
+    margin: -2em 2em 2em;
+  }
+  .song-detail .song-list {
+    background-color: var(--music-player-color);
+    opacity: 50%;
+    padding: .2em 1.5em;
+    border-radius: 10px;
+    margin-bottom: .75em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .song-detail .song-infor {
+    gap: .1em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .song-data {
+    margin: 1em;
+    padding: 1em;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .song-data .like-text {
+    display: block;
+  }
+  .song-data div {
+    margin: 8px;
+    background-color: var(--music-player-color);
+    padding: .5em 2.5em;
+    border-radius: 10px;
+  }
+}
+/*# sourceMappingURL=app.css.map */
