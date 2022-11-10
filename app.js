@@ -7,8 +7,6 @@ function myFunction() {
     let searchSection = document.getElementById("search-sec");
     let sticky = searchSection.offsetTop;
 
-    console.log(sticky);
-
    if (window.pageYOffset >= sticky) {
        searchSection.classList.add("sticky")
    }
@@ -45,7 +43,7 @@ function myFunction() {
     albumChart.addEventListener('click', (e) => {
         window.location.href = "tomorrowchart.html";
     })
-});
+})();
 
 
 // SLIDER ANIMATION 
